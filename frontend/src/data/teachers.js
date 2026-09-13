@@ -1,0 +1,27 @@
+export const TEACHERS = [];
+/*
+  { id: "t01", name: "Mr. Muhammad Ahmed", initials: "MA", subjects: ["Mathematics"], classes: ["7A", "8A", "9A"], weeklyPeriods: 28, maxDaily: 6, status: "Active", availability: "full", phone: "0301-2345671", email: "m.ahmed@alfalah.edu.pk" },
+  { id: "t02", name: "Ms. Fatima Khan", initials: "FK", subjects: ["English"], classes: ["6A", "7A", "8A"], weeklyPeriods: 26, maxDaily: 6, status: "Active", availability: "full", phone: "0301-2345672", email: "f.khan@alfalah.edu.pk" },
+  { id: "t03", name: "Ms. Nadia Hussain", initials: "NH", subjects: ["Mathematics", "Chemistry"], classes: ["8A", "9B"], weeklyPeriods: 24, maxDaily: 5, status: "Active", availability: "full", phone: "0301-2345673", email: "n.hussain@alfalah.edu.pk" },
+  { id: "t04", name: "Mr. Ali Malik", initials: "AM", subjects: ["Urdu", "Islamiat"], classes: ["6A", "7B", "8A", "8B"], weeklyPeriods: 30, maxDaily: 6, status: "Active", availability: "full", phone: "0301-2345674", email: "a.malik@alfalah.edu.pk" },
+  { id: "t05", name: "Mr. Usman Raza", initials: "UR", subjects: ["Computer Science"], classes: ["8A", "8B", "9A"], weeklyPeriods: 18, maxDaily: 4, status: "Active", availability: "partial", phone: "0301-2345675", email: "u.raza@alfalah.edu.pk" },
+  { id: "t06", name: "Ms. Sana Qureshi", initials: "SQ", subjects: ["Chemistry"], classes: ["7C", "8A", "8C"], weeklyPeriods: 24, maxDaily: 5, status: "Active", availability: "full", phone: "0301-2345676", email: "s.qureshi@alfalah.edu.pk" },
+  { id: "t07", name: "Ms. Bushra Akhtar", initials: "BA", subjects: ["Biology"], classes: ["8A", "8C", "9B"], weeklyPeriods: 22, maxDaily: 5, status: "Active", availability: "full", phone: "0301-2345677", email: "b.akhtar@alfalah.edu.pk" },
+  { id: "t08", name: "Ms. Zainab Siddiqui", initials: "ZS", subjects: ["Pakistan Studies"], classes: ["6C", "8A", "9A"], weeklyPeriods: 20, maxDaily: 4, status: "Active", availability: "full", phone: "0301-2345678", email: "z.siddiqui@alfalah.edu.pk" },
+  { id: "t09", name: "Mr. Ali Hassan", initials: "AH", subjects: ["Physics"], classes: ["7B", "8A", "9A"], weeklyPeriods: 24, maxDaily: 5, status: "Active", availability: "full", phone: "0301-2345679", email: "a.hassan@alfalah.edu.pk" },
+  { id: "t10", name: "Ms. Ayesha Malik", initials: "AY", subjects: ["Mathematics"], classes: ["6B"], weeklyPeriods: 18, maxDaily: 5, status: "Active", availability: "full", phone: "0301-2345680", email: "ay.malik@alfalah.edu.pk" },
+  { id: "t11", name: "Mr. Bilal Akhtar", initials: "BI", subjects: ["Biology", "Chemistry"], classes: ["8C"], weeklyPeriods: 20, maxDaily: 5, status: "Active", availability: "full", phone: "0301-2345681", email: "bi.akhtar@alfalah.edu.pk" },
+  { id: "t12", name: "Ms. Hina Tariq", initials: "HT", subjects: ["English"], classes: ["9A", "9B", "10A"], weeklyPeriods: 26, maxDaily: 6, status: "Active", availability: "full", phone: "0301-2345682", email: "h.tariq@alfalah.edu.pk" },
+  { id: "t13", name: "Mr. Faisal Iqbal", initials: "FI", subjects: ["Geography", "History"], classes: ["7A", "7B"], weeklyPeriods: 16, maxDaily: 4, status: "Active", availability: "partial", phone: "0301-2345683", email: "f.iqbal@alfalah.edu.pk" },
+  { id: "t14", name: "Ms. Rabia Saeed", initials: "RS", subjects: ["Art"], classes: ["6A", "6B", "6C"], weeklyPeriods: 12, maxDaily: 3, status: "Active", availability: "full", phone: "0301-2345684", email: "r.saeed@alfalah.edu.pk" },
+  { id: "t15", name: "Mr. Kamran Sheikh", initials: "KS", subjects: ["Physical Education"], classes: ["6A", "6B", "6C", "7A", "7B", "7C"], weeklyPeriods: 20, maxDaily: 5, status: "Active", availability: "full", phone: "0301-2345685", email: "k.sheikh@alfalah.edu.pk" },
+  { id: "t16", name: "Ms. Sadia Aslam", initials: "SA", subjects: ["Economics"], classes: ["9A", "10A", "10B"], weeklyPeriods: 18, maxDaily: 4, status: "Active", availability: "full", phone: "0301-2345686", email: "s.aslam@alfalah.edu.pk" },
+  { id: "t17", name: "Mr. Tariq Javed", initials: "TJ", subjects: ["Mathematics"], classes: ["9B", "10A", "10B"], weeklyPeriods: 24, maxDaily: 5, status: "Active", availability: "full", phone: "0301-2345687", email: "t.javed@alfalah.edu.pk" },
+  { id: "t18", name: "Ms. Mahnoor Farooq", initials: "MF", subjects: ["Chemistry", "Physics"], classes: ["10A", "10B"], weeklyPeriods: 22, maxDaily: 5, status: "On Leave", availability: "unavailable", phone: "0301-2345688", email: "m.farooq@alfalah.edu.pk" },
+  { id: "t19", name: "Mr. Naveed Chaudhry", initials: "NC", subjects: ["Urdu"], classes: ["9A", "9B", "10A", "10B"], weeklyPeriods: 20, maxDaily: 5, status: "Active", availability: "full", phone: "0301-2345689", email: "n.chaudhry@alfalah.edu.pk" },
+  { id: "t20", name: "Ms. Iram Nasir", initials: "IN", subjects: ["Islamiat"], classes: ["9A", "9B", "10A", "10B"], weeklyPeriods: 16, maxDaily: 4, status: "Active", availability: "full", phone: "0301-2345690", email: "i.nasir@alfalah.edu.pk" },
+  { id: "t21", name: "Mr. Waqas Ahmed", initials: "WA", subjects: ["Computer Science"], classes: ["9A", "9B", "10A", "10B"], weeklyPeriods: 20, maxDaily: 5, status: "Active", availability: "full", phone: "0301-2345691", email: "w.ahmed@alfalah.edu.pk" },
+  { id: "t22", name: "Ms. Sobia Rehman", initials: "SR", subjects: ["Biology"], classes: ["10A", "10B"], weeklyPeriods: 16, maxDaily: 4, status: "Active", availability: "partial", phone: "0301-2345692", email: "s.rehman@alfalah.edu.pk" },
+]; */
+
+export const getTeacherById = (id) => TEACHERS.find((t) => t.id === id);
